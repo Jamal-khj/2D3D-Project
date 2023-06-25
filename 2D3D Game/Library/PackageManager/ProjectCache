@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638232924830709612
-    m_Hash: 2362511596
+      ticks: 638232929498464583
+    m_Hash: 2748323826
   m_LockFileStatus:
     m_FilePath: C:/Users/jamal/2D3D-Project/2D3D Game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638232925091442241
-    m_Hash: 1613653515
+      ticks: 638232929498464583
+    m_Hash: 2520203705
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -3349,7 +3349,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Libraries
-  type: 
+  type: asset
   description: Custom version of the nunit package build to work with Unity. Used
     by the Unity Test Framework.
   status: 0
@@ -3364,10 +3364,12 @@ m_ResolvedPackages:
     - 1.0.6
     - 2.0.2
     - 2.0.3
+    - 2.0.4
     compatible:
     - 1.0.6
     - 2.0.2
     - 2.0.3
+    - 2.0.4
     recommended: 1.0.6
     deprecated: []
   dependencies: []

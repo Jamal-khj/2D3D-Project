@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public KeyCode LeftMovement = KeyCode.None;
-    public KeyCode RightMovement = KeyCode.None;
+    private float horizontal;
     public float Speed = 0.0f;
+    [SerializeField] private Rigidbody2D rb;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+        horizontal = Input.GetAxisRaw("Horizontal");
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontal * Speed,rb.velocity.y);
     }
 }

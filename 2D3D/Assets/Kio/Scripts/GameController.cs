@@ -97,6 +97,8 @@ public class GameController : MonoBehaviour
             firstGuessPuzzle = puzzleSpriteList[firstGuessIndex].name;
 
             puzzleButtons[firstGuessIndex].image.sprite = puzzleSpriteList[firstGuessIndex];
+
+            puzzleButtons[firstGuessIndex].interactable = false;
         }
         else if (!secondGuess)
         {
@@ -107,6 +109,8 @@ public class GameController : MonoBehaviour
             secondGuessPuzzle = puzzleSpriteList[secondGuessIndex].name;
 
             puzzleButtons[secondGuessIndex].image.sprite = puzzleSpriteList[secondGuessIndex];
+
+            puzzleButtons[secondGuessIndex].interactable = false;
 
             StartCoroutine(CheckIfThePuzzlesMatch());
         }
@@ -131,6 +135,9 @@ public class GameController : MonoBehaviour
         else
         {
             yield return new WaitForSeconds(1f);
+
+            puzzleButtons[firstGuessIndex].interactable = true;
+            puzzleButtons[secondGuessIndex].interactable = true;
 
             puzzleButtons[firstGuessIndex].image.sprite = bgImage;
             puzzleButtons[secondGuessIndex].image.sprite = bgImage;

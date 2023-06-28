@@ -922,7 +922,8 @@ MonoBehaviour:
   - {fileID: 2110685303}
   enemyPrefabs:
   - {fileID: 5564369794224552533, guid: 45d64785bb83fe242ac9d3910c42a70a, type: 3}
-  SpawnTimer: 0
+  SpawnTimer: 1
+  Timer: 2
 --- !u!1 &1038527035
 GameObject:
   m_ObjectHideFlags: 0

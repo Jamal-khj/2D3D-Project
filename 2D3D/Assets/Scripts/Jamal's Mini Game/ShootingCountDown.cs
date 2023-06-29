@@ -26,9 +26,9 @@ public class ShootingCountDown : MonoBehaviour
     void Update()
     {
         CurrentTime -= Time.deltaTime;
-        CountDownText.text = "" + (int)CurrentTime;
+        CountDownText.text = "Time left: " + (int)CurrentTime;
 
-        if (CurrentTime < 0.0f)
+        if (CurrentTime <= 0.0f)
         {
             Win();
         }

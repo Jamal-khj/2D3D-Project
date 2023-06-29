@@ -6,9 +6,12 @@ using UnityEngine.Scripting.APIUpdating;
 public class NewBehaviourScript : MonoBehaviour
 {
     public float speed = 8f;
+    public float Jump;
     private float horizontal;
     private float jumpingpower;
     private bool isfacingright = true;
+
+    private bool doublejump;
 
     [SerializeField] Rigidbody2D rb2d;
     [SerializeField] private Transform groundcheck;
@@ -23,14 +26,27 @@ public class NewBehaviourScript : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown("Jump") && IsGrounded()) 
+       /* if(IsGrounded() && !Input.GetButton("Jump"))
         {
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpingpower);
+            doublejump= false;
         }
+
+        if (Input.GetButtonDown("Jump"))
+        { 
+            if (IsGrounded() || doublejump)
+            {
+            
+                rb2d.velocity = new Vector2(rb2d.velocity.x, jumpingpower);
+
+                doublejump = !doublejump;
+            }
+        }
+                  
+        
         if(Input.GetButtonUp("Jump") && rb2d.velocity.y > 0f)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * 0.5f);
-        }
+        }*/
        
         flip();
     }

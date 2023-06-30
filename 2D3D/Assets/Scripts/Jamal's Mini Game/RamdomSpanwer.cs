@@ -10,11 +10,15 @@ public class RamdomSpanwer : MonoBehaviour
     public float SpawnTimer = 2.0f;
     public float FixedSpawnTimer;
 
+    private void Start()
+    {
+        FixedSpawnTimer = 1.0f;
+    }
+
     // Update is called once per frame
     void Update()
     {
         SpawnTimer -= Time.deltaTime;
-        FixedSpawnTimer = 2.0f;
 
         //Spawning enemies
         if (SpawnTimer < 0.0f)

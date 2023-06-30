@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting.Dependencies.Sqlite;
 
 public class GameController : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject winScreen;
     [SerializeField] private GameObject gameOver;
     [SerializeField] private TMP_Text wrongGuessCountText;
+    [SerializeField] private AudioSource cardFlipSFX;
+    [SerializeField] private AudioSource rightSFX;
+    [SerializeField] private AudioSource wrongSFX;
 
     private bool firstGuess, secondGuess;
 
@@ -99,6 +103,8 @@ public class GameController : MonoBehaviour
             puzzleButtons[firstGuessIndex].image.sprite = puzzleSpriteList[firstGuessIndex];
 
             puzzleButtons[firstGuessIndex].interactable = false;
+
+            cardFlipSFX.Play();
         }
         else if (!secondGuess)
         {
@@ -113,6 +119,8 @@ public class GameController : MonoBehaviour
             puzzleButtons[secondGuessIndex].interactable = false;
 
             StartCoroutine(CheckIfThePuzzlesMatch());
+
+            cardFlipSFX.Play();
         }
     }
 
@@ -123,6 +131,8 @@ public class GameController : MonoBehaviour
         if(firstGuessPuzzle == secondGuessPuzzle)
         {
             yield return new WaitForSeconds(0.5f);
+
+            rightSFX.Play();
 
             puzzleButtons[firstGuessIndex].interactable = false;
             puzzleButtons[secondGuessIndex].interactable = false;
@@ -135,6 +145,9 @@ public class GameController : MonoBehaviour
         else
         {
             yield return new WaitForSeconds(1f);
+
+            wrongSFX.Play();
+            cardFlipSFX.Play();
 
             puzzleButtons[firstGuessIndex].interactable = true;
             puzzleButtons[secondGuessIndex].interactable = true;

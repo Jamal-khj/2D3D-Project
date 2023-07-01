@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - PuzzleButton
+  - Enemy
+  - ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
   - 

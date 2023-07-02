@@ -7,12 +7,12 @@ public class RamdomSpanwer : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
 
-    public float SpawnTimer = 2.0f;
+    public float SpawnTimer;
     public float FixedSpawnTimer;
 
     private void Start()
     {
-        FixedSpawnTimer = 1.0f;
+       SpawnTimer = 1.0f;
     }
 
     // Update is called once per frame

@@ -26,7 +26,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-       /* if(IsGrounded() && !Input.GetButton("Jump"))
+        if(IsGrounded() && !Input.GetButton("Jump"))
         {
             doublejump= false;
         }
@@ -46,7 +46,7 @@ public class NewBehaviourScript : MonoBehaviour
         if(Input.GetButtonUp("Jump") && rb2d.velocity.y > 0f)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * 0.5f);
-        }*/
+        }
        
         flip();
     }

@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     public float Speed = 0.0f;
     [SerializeField] private Rigidbody2D rb;
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -16,6 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * Speed,rb.velocity.y);
+        rb.velocity = new Vector2(horizontal * Speed, rb.velocity.y);
     }
 }

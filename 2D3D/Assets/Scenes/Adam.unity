@@ -2629,7 +2629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1b2874057efe143aee988be80bb31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingTime: 10
+  StartingTime: 50
   CountDownText: {fileID: 1924246812}
   WinScreen: {fileID: 2068663425}
 --- !u!114 &1621835201

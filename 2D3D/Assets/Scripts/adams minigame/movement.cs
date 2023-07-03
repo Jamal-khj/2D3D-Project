@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
-public class NewBehaviourScript : MonoBehaviour
+public class movement : MonoBehaviour
 {
     public float speed = 8f;
     public float Jump;

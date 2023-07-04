@@ -9,8 +9,8 @@ public class Camera3D : MonoBehaviour
 
     public Transform Orientation;
 
-    float RotatioinX;
-    float RotatioinY;
+    [SerializeField]float RotatioinX;
+    [SerializeField] float RotatioinY;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class Camera3D : MonoBehaviour
         // Mouse Input
         float MouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float MouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
-
+        Debug.Log(MouseX + " " + MouseY);
         RotatioinY += MouseX;
         RotatioinX -= MouseY;
         RotatioinX = Mathf.Clamp(RotatioinX, -90.0f, 90f);

@@ -1794,6 +1794,8 @@ MonoBehaviour:
   sensX: 400
   sensY: 400
   Orientation: {fileID: 96520985}
+  RotatioinX: 0
+  RotatioinY: 0
 --- !u!1 &1038527035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,6 +3180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1712659602}
+  - component: {fileID: 1712659603}
   m_Layer: 0
   m_Name: Jamal's Mini Game
   m_TagString: Untagged
@@ -3203,6 +3206,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712659603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712659601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183e0f8c6f9fd8e46aaace6ba06d23a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToEnable:
+  - {fileID: 664302693}
+  objectsToDisable:
+  - {fileID: 1749482480}
 --- !u!1 &1749482480
 GameObject:
   m_ObjectHideFlags: 0

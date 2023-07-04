@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Adam.unity
+    guid: d535cc49586447a45b02eb4b2262e87f
+  - enabled: 1
+    path: Assets/Scenes/Kio.unity
+    guid: 39a6dbc40cdca76488f37185f92ebc82
+  - enabled: 1
+    path: Assets/Scenes/Jamal.unity
+    guid: ae5df877747cfa9428b574dfadc4e837
   m_configObjects: {}

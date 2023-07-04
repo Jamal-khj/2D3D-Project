@@ -21,7 +21,7 @@ public class movement : MonoBehaviour
     [SerializeField] private LayerMask walllayer;
     void Start()
     {
-      
+        rb2d = this.GetComponent<Rigidbody2D>();
     }
 
 
@@ -35,25 +35,28 @@ public class movement : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Jump"))
-        { 
+        {
+            Debug.Log("Jump runniong");
             if (IsGrounded() || doublejump)
             {
-            
-                rb2d.velocity = new Vector2(rb2d.velocity.x, jumpingpower);
+                Debug.Log("Jump runniong !!!!!!");
+                //Vector2 velo = new Vector2(rb2d.velocity.x, rb2d.velocity.y);
+                rb2d.AddForce(new Vector2(rb2d.velocity.x, Jump));
 
                 doublejump = !doublejump;
             }
+
         }
-                  
-        
-        if(Input.GetButtonUp("Jump") && rb2d.velocity.y > 0f)
-        {
-            rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * 0.5f);
-        }
+
+
+         if(Input.GetButtonUp("Jump") && rb2d.velocity.y > 0f)
+         {
+             rb2d.velocity = new Vector2(rb2d.velocity.x, rb2d.velocity.y * 0.5f);
+         }
 
         WallSlide();
         flip();
-    }
+    }  
 
     private void FixedUpdate()
     {
@@ -66,15 +69,16 @@ public class movement : MonoBehaviour
 
     private bool IsWalled()
     {
-        return Physics2D.OverlapCircle(wallcheck.position, 0.2f,walllayer);
+        return Physics2D.OverlapCircle(wallcheck.position, 0.2f,walllayer);     
     }
 
     private void WallSlide()
     {
         if (IsWalled() && !IsGrounded() && horizontal != 0f)
         {
+            Debug.Log("Doing something");
             iswallsliding= true;
-            rb2d.velocity = new Vector2(rb2d.velocity.x,Mathf.Clamp(rb2d.velocity.y - wallslidingspeed, float.MaxValue));
+            rb2d.velocity = new Vector2(rb2d.velocity.x,Mathf.Clamp(rb2d.velocity.y - wallslidingspeed, float.MinValue ,float.MaxValue));
         }
         else
         {

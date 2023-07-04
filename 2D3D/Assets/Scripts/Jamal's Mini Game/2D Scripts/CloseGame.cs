@@ -23,6 +23,5 @@ public class CloseGame : MonoBehaviour
         Game3D.SetActive(true);
         Time.timeScale = 1.0f;
         this.gameObject.SetActive(false);
-   
     }
 }

@@ -8,6 +8,7 @@ public class ExitMiniGame : MonoBehaviour
     public void loadmaingame()
     {
         SceneManager.LoadScene("Main Game");
+        Time.timeScale= 1.0f;
     }
    
 }

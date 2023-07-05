@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c56c70bfe3e3a4c82d9d37c301efd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 1
+  MaxHealth: 15
   CurrentHealth: 0
   Health: {fileID: 2126646883}
   GameOverMessage: {fileID: 1461797201}
@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5628decb6d193f14db124c20bc4e1c43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 12
   rb: {fileID: 551849063}
 --- !u!1 &568364826
 GameObject:
@@ -1282,8 +1282,8 @@ MonoBehaviour:
   - {fileID: 2110685303}
   enemyPrefabs:
   - {fileID: 5564369794224552533, guid: 45d64785bb83fe242ac9d3910c42a70a, type: 3}
-  SpawnTimer: 1
-  FixedSpawnTimer: 1
+  SpawnTimer: 0.7
+  FixedSpawnTimer: 0.7
 --- !u!1 &1038527035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,7 +2624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1b2874057efe143aee988be80bb31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingTime: 5
+  StartingTime: 61
   CountDownText: {fileID: 1995675699}
   WinScreen: {fileID: 827960882}
 --- !u!1 &2126646881

@@ -278,8 +278,9 @@ GameObject:
   - component: {fileID: 94243032}
   - component: {fileID: 94243031}
   - component: {fileID: 94243030}
+  - component: {fileID: 94243033}
   m_Layer: 0
-  m_Name: Wall (8)
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,6 +372,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94243028}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &94243033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94243028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7606b6896c0bf542ad53a5d81dfa63c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &96070633
 GameObject:
   m_ObjectHideFlags: 0
@@ -5718,7 +5731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1996640395
 RectTransform:
   m_ObjectHideFlags: 0

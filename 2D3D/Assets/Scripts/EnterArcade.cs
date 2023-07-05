@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitMiniGame : MonoBehaviour
+public class EnterArcade : MonoBehaviour
 {
-    public void loadmaingame()
+    public void LoadArcade()
     {
         SceneManager.LoadScene("Main Game");
-        Time.timeScale= 1.0f;
     }
 }

@@ -8,5 +8,6 @@ public class MiniButtonAdam : MonoBehaviour
     public void LoadAdamGame()
     {
         SceneManager.LoadScene("Adam");
+        Time.timeScale = 1.0f;
     }
 }
